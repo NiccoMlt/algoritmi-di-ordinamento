@@ -2,5 +2,6 @@
     "recommendations": [
         "EditorConfig.EditorConfig",
         "James-Yu.latex-workshop"
+        "naco-siren.gradle-language"
     ]
 }

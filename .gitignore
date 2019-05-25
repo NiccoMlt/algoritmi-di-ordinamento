@@ -1,5 +1,6 @@
-# Created by https://www.gitignore.io/api/git,osx,tex,c++,latex,linux,macos,windows,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=git,osx,tex,c++,latex,linux,macos,windows,visualstudiocode
+
+# Created by https://www.gitignore.io/api/git,osx,tex,c++,latex,linux,macos,gradle,windows,eclipse,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=git,osx,tex,c++,latex,linux,macos,gradle,windows,eclipse,visualstudiocode
 
 ### C++ ###
 # Prerequisites
@@ -34,6 +35,75 @@
 *.exe
 *.out
 *.app
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### Eclipse Patch ###
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Annotation Processing
+.apt_generated
+
+.sts4-cache/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -288,7 +358,6 @@ TSWLatexianTemp*
 
 ## Editors:
 # WinEdt
-*.bak
 *.sav
 
 # Texpad
@@ -374,9 +443,9 @@ Temporary Items
 ### TeX ###
 
 # these rules might exclude image files for figures etc.
-*.ps
-*.eps
-*.pdf
+# *.ps
+# *.eps
+# *.pdf
 
 
 
@@ -526,6 +595,26 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/git,osx,tex,c++,latex,linux,macos,windows,visualstudiocode
+### Gradle ###
+.gradle
+build/
 
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# End of https://www.gitignore.io/api/git,osx,tex,c++,latex,linux,macos,gradle,windows,eclipse,visualstudiocode
+
+*.pdf
 *.xmpdata
