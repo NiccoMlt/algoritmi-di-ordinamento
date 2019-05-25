@@ -1,0 +1,99 @@
+%% Direttive TeXworks:
+% !TeX root = ./ordinamento.tex
+% !TEX encoding = UTF-8 Unicode
+%% !TEX program = arara
+%% !TEX TS-program = arara
+% !TeX spellcheck = it-IT
+
+% arara: pdflatex: { synctex: yes }
+% arara: pdflatex: { synctex: yes }
+
+%% Genera un file report.xmpdata con i dati di titolo e autore per il formato PDF/A %%
+\begin{filecontents*}{\jobname.xmpdata}
+  \Title{Algoritmi di ordinamento}
+  \Author{Niccolò Maltoni}
+  \Copyright{Questo documento è fornito sotto licenza Creative Commons Attribution-ShareAlike 4.0 International}
+  \CopyrightURL{http://creativecommons.org/licenses/by-sa/4.0}
+\end{filecontents*}
+
+\documentclass[%
+  a4paper,            % specifica il formato A4 (default: letter)
+  11pt,               % specifica la dimensione del carattere a 12
+  oneside,            % serve per impaginare per stampa solo fronte
+  notitlepage         % mette il titolo in una pagina separata (solo per article)
+]{article}
+
+\usepackage{a4wide}           % consente di avere più spazio nell'A4
+\usepackage[T1]{fontenc}      % serve per impostare la codifica di output del font
+\usepackage{textcomp}         % serve per fornire supporto ai Text Companion fonts
+\usepackage[utf8]{inputenc}   % serve per impostare la codifica di input del font
+\usepackage[italian]{babel}   % serve per scrivere Indice, Capitolo, etc in Italiano
+\usepackage{lmodern}          % carica una variante Latin Modern prodotto dal GUST
+\usepackage{indentfirst}      % serve per avere l'indentazione nel primo paragrafo
+\usepackage{setspace}         % serve a fornire comandi di interlinea standard
+\usepackage{xcolor}           % serve per la gestione dei colori nel testo
+\usepackage{graphicx}         % serve per includere immagini e grafici
+\usepackage{float}            % Permette di impostare la posizione assoluta delle immagini
+\usepackage{listings} 			  % Permette di inserire codice nel documento
+
+\graphicspath{{./fig/}}
+
+\usepackage[%
+  strict,             % rende tutti gli warning degli errori
+  autostyle,          % imposta lo stile in base al linguaggio specificato in babel
+  english=american,   % imposta lo stile per l'inglese
+  italian=guillemets  % imposta lo stile per l'italiano
+]{csquotes}                   % serve a impostare lo stile delle virgolette
+
+\usepackage{multirow}         % aggiunge la possibilità di raggruppare celle su più righe nelle tabelle
+
+\onehalfspacing{}             % Imposta interlinea a 1,5 ed equivale a \linespread{1,5}
+
+\setcounter{secnumdepth}{3}   % Numera fino alla sottosezione nel corpo del testo
+\setcounter{tocdepth}{3}      % Numera fino alla sotto-sottosezione nell'indice
+
+\usepackage[%
+  depth=3,            % equivale a bookmarksdepth di hyperref
+  open=false,         % equivale a bookmarksopen di hyperref
+  numbered=true       % equivale a bookmarksnumbered di hyperref
+]{bookmark}                   % Gestisce i segnalibri meglio di hyperref
+\usepackage{hyperref}         % Gestisce tutte le cose ipertestuali del pdf
+\hypersetup{%
+  pdfpagemode={UseNone},
+  hidelinks,          % nasconde i collegamenti (non vengono quadrettati)
+  hypertexnames=false,
+  linktoc=all,        % inserisce i link nell'indice
+  unicode=true,       % only Latin characters in Acrobat’s bookmarks
+  pdftoolbar=false,   % show Acrobat’s toolbar?
+  pdfmenubar=false,   % show Acrobat’s menu?
+  plainpages=false,
+  breaklinks,
+  pdfstartview={Fit},
+  pdfauthor={Niccolò Maltoni},
+  pdfcreator={Niccolò Maltoni},
+  pdftitle={Algoritmi di ordinamento},
+  pdflang={it}
+}
+
+\usepackage[a-1b]{pdfx}
+\usepackage[%
+  italian,            % definizione delle lingue da usare
+  nameinlink          % inserisce i link nei riferimenti
+]{cleveref}                   % permette di usare riferimenti migliori dei \ref e dei varioref
+
+\title{\LARGE{\textbf{Algoritmi di ordinamento}}}
+
+\author{Niccolò~Maltoni}
+
+\date{}
+
+\begin{document}
+
+  \maketitle
+  \clearpage
+  \tableofcontents
+  \clearpage
+
+  \section{Introduzione}
+  Pippo.
+\end{document}
