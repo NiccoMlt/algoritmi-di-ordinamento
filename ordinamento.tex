@@ -91,7 +91,7 @@
   \maketitle
   \clearpage
 
-  \section{Selection sort}
+  \section{Selection sort}\label{sec:selection}
 
   Il \textbf{Selection sort} (in italiano, \textit{ordinamento per selezione})
   è un algoritmo di ordinamento \textit{in place} che procede selezionando il numero minore nel vettore
@@ -112,5 +112,36 @@
   \end{itemize}
 
   \inputminted{cpp}{./src/selection.cpp}
+
+  \section{Bubblesort}\label{sec:bubble}
+
+  Il \textbf{Bubblesort} (in italiano, \textit{ordinamento a bolle})
+  è un algoritmo di ordinamento iterativo \textit{in place} che procede per scambi successivi di elementi adiacenti,
+  portando ad ogni iterazione l’elemento massimo nell'ultima posizione del sottovettore.
+
+  La principale differenza rispetto al \textit{Selection sort} sta nel considerare gli elementi a ``bolle''
+  (coppie di elementi adiacenti) anziché effettuare una completa ricerca del minimo (o del massimo) ad ogni iterazione.
+
+  \inputminted{cpp}{./src/bubble/simple.cpp}
+
+  \clearpage
+
+  \subsection{Bubblesort con sentinella}\label{subsec:bubble:flag}
+
+  Il \textit{Bubblesort} può essere ottimizzato tramite l'inserimento di una sentinella (\textit{flag}).
+  Tramite una variabile booleana, infatti, è possibile verificare se, al termine di un'iterazione,
+  sono stati effettuati scambi; qualora non siano avvenuti, non è necessario continuare con le iterazioni.
+
+  \inputminted{cpp}{./src/bubble/flag.cpp}
+
+  \clearpage
+
+  \subsection{Bubblesort ottimizzato}\label{subsec:bubble:opt}
+
+  Il \textit{Bubblesort} (sia base che con sentinella) può essere ottimizzato tenendo conto del fatto che
+  dopo ogni iterazione l'elemento più grande si troverà certamente nell'ultima posizione della sottosezione
+  non ordinata; di conseguenza, è possibile ridurre di dimensione la sottosezione analizzata ad ogni iterazione.
+
+  \inputminted{cpp}{./src/bubble/optimized.cpp}
 
 \end{document}
