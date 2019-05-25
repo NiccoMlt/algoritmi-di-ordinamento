@@ -111,7 +111,7 @@
     \item scorrimento di un vettore.
   \end{itemize}
 
-  \inputminted{cpp}{./src/selection.cpp}
+  \inputminted[firstline=3,lastline=23]{cpp}{./src/main/cpp/Selection.cpp}
 
   \section{Bubblesort}\label{sec:bubble}
 
@@ -122,7 +122,7 @@
   La principale differenza rispetto al \textit{Selection sort} sta nel considerare gli elementi a ``bolle''
   (coppie di elementi adiacenti) anziché effettuare una completa ricerca del minimo (o del massimo) ad ogni iterazione.
 
-  \inputminted{cpp}{./src/bubble/simple.cpp}
+  \inputminted[firstline=3,lastline=19]{cpp}{./src/main/cpp/Bubble.cpp}
 
   \clearpage
 
@@ -132,7 +132,7 @@
   Tramite una variabile booleana, infatti, è possibile verificare se, al termine di un'iterazione,
   sono stati effettuati scambi; qualora non siano avvenuti, non è necessario continuare con le iterazioni.
 
-  \inputminted{cpp}{./src/bubble/flag.cpp}
+  \inputminted[firstline=37,lastline=60]{cpp}{./src/main/cpp/Bubble.cpp}
 
   \clearpage
 
@@ -142,6 +142,23 @@
   dopo ogni iterazione l'elemento più grande si troverà certamente nell'ultima posizione della sottosezione
   non ordinata; di conseguenza, è possibile ridurre di dimensione la sottosezione analizzata ad ogni iterazione.
 
-  \inputminted{cpp}{./src/bubble/optimized.cpp}
+  \inputminted[firstline=20,lastline=36]{cpp}{./src/main/cpp/Bubble.cpp}
+
+  \clearpage
+
+  \section{Insertion sort}\label{sec:insertion}
+
+  L'\textit{Insertion Sort} (in italiano, ordinamento a inserimento) è un algoritmo di ordinamento
+  che procede inserendo, uno alla volta, gli elementi del vettore disordinato in un contesto ordinato.
+
+  Può essere realizzato \textit{in place} qualora preveda lo spostamento degli elementi del vettore stesso
+  per far posto all'elemento che si vuole inserire in posizione corretta, oppure in modo \textit{out of place}
+  se si alloca un nuovo vettore di dimensione analoga a quello fornito in input per effettuare gli inserimenti.
+
+  \inputminted[firstline=27,lastline=43]{cpp}{./src/main/cpp/Insertion.cpp}
+
+  \clearpage
+
+  \inputminted[firstline=3,lastline=26]{cpp}{./src/main/cpp/Insertion.cpp}
 
 \end{document}
