@@ -77,7 +77,8 @@
     "latex-workshop.hover.preview.enabled": true,
     "latex-workshop.hover.preview.ref.enabled": true,
     "latex-workshop.hover.command.enabled": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.intellisense.citation.label": "title",
     "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.texdoc.path": "texdoc"
+    "latex-workshop.texdoc.path": "texdoc",
 }

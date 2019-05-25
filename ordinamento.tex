@@ -5,8 +5,8 @@
 %% !TEX TS-program = arara
 % !TeX spellcheck = it-IT
 
-% arara: pdflatex: { synctex: yes }
-% arara: pdflatex: { synctex: yes }
+% arara: pdflatex: { synctex: yes, shell: yes }
+% arara: pdflatex: { synctex: yes, shell: yes }
 
 %% Genera un file report.xmpdata con i dati di titolo e autore per il formato PDF/A %%
 \begin{filecontents*}{\jobname.xmpdata}
@@ -34,14 +34,13 @@
 \usepackage{xcolor}           % serve per la gestione dei colori nel testo
 \usepackage{graphicx}         % serve per includere immagini e grafici
 \usepackage{float}            % Permette di impostare la posizione assoluta delle immagini
-\usepackage{listings} 			  % Permette di inserire codice nel documento
+\usepackage{minted} 			    % Permette di inserire codice nel documento
 
 \graphicspath{{./fig/}}
 
 \usepackage[%
   strict,             % rende tutti gli warning degli errori
   autostyle,          % imposta lo stile in base al linguaggio specificato in babel
-  english=american,   % imposta lo stile per l'inglese
   italian=guillemets  % imposta lo stile per l'italiano
 ]{csquotes}                   % serve a impostare lo stile delle virgolette
 
@@ -91,9 +90,27 @@
 
   \maketitle
   \clearpage
-  \tableofcontents
-  \clearpage
 
-  \section{Introduzione}
-  Pippo.
+  \section{Selection sort}
+
+  Il \textbf{Selection sort} (in italiano, \textit{ordinamento per selezione})
+  è un algoritmo di ordinamento \textit{in place} che procede selezionando il numero minore nel vettore
+  e posizionandolo nella sottosezione ordinata del vettore;
+  di fatto suddivide il vettore in due sotsottosezioni:
+
+  \begin{itemize}
+    \item una ordinata, che occupa le prime posizioni dell'array;
+    \item una non ordinata, che costituisce la parte restante dell'array.
+  \end{itemize}
+
+  \noindent{} L'algoritmo può essere considerato la composizione dei problemi di:
+
+  \begin{itemize}
+    \item ricerca del minimo in un vettore;
+    \item scambio di elementi in un vettore;
+    \item scorrimento di un vettore.
+  \end{itemize}
+
+  \inputminted{cpp}{./src/selection.cpp}
+
 \end{document}
