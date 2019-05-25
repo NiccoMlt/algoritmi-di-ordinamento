@@ -4,6 +4,12 @@
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.latex.recipes": [
       {
+        "name": "arara",
+        "tools": [
+          "arara"
+        ]
+      },
+      {
         "name": "latexmk 🔃",
         "tools": [
           "latexmk"
@@ -17,15 +23,20 @@
           "pdflatex",
           "pdflatex"
         ]
-      },
-      {
-        "name": "arara",
-        "tools": [
-          "arara"
-        ]
       }
     ],
     "latex-workshop.latex.tools": [
+      {
+        "name": "arara",
+        "command": "arara",
+        "args": [
+          "--language=it",
+          "--log",
+          "--verbose",
+          "%DOCFILE%"
+        ],
+        "env": {}
+      },
       {
         "name": "latexmk",
         "command": "latexmk",
@@ -57,17 +68,6 @@
           "%DOCFILE%"
         ],
         "env": {}
-      },
-      {
-        "name": "arara",
-        "command": "arara",
-        "args": [
-          "--language=it",
-          "--log",
-          "--verbose",
-          "%DOCFILE%"
-        ],
-        "env": {}
       }
     ],
     "latex-workshop.chktex.enabled": true,
@@ -81,5 +81,10 @@
     "latex-workshop.intellisense.citation.label": "title",
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.texdoc.path": "texdoc",
-    "C_Cpp.clang_format_style": "Mozilla"
+    "C_Cpp.clang_format_style": "Mozilla",
+    "files.associations": {
+      "ostream": "cpp",
+      "iostream": "cpp",
+      "cassert": "cpp"
+    }
 }

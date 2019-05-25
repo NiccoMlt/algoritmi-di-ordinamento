@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "EditorConfig.EditorConfig",
-        "James-Yu.latex-workshop"
+        "James-Yu.latex-workshop",
+        "ms-vscode.cpptools",
         "naco-siren.gradle-language"
     ]
 }
